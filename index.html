@@ -89,7 +89,7 @@
 
 	// create atToolkitContext
 	var arToolkitContext = new THREEx.ArToolkitContext({
-		cameraParametersUrl: '../../data/data/camera_para.dat',
+		cameraParametersUrl: 'data/data/camera_para.dat',
 		detectionMode: 'mono',
 		imageSmoothingEnabled: false,
 		maxDetectionRate: 30,
@@ -103,7 +103,7 @@
 		camera.projectionMatrix.fromArray(projectionMatrix);
 	})
 
-	// update artoolkit on every frame
+	// update artoolkit on every frameh
 	onRenderFcts.push(function(){
 		if( arToolkitSource.ready === false )	return
 
@@ -119,7 +119,7 @@
 	scene.add(markerRoot)
 	var artoolkitMarker = new THREEx.ArMarkerControls(arToolkitContext, markerRoot, {
 		type : 'pattern',
-		patternUrl : '../../data/data/patt.hiro'
+		patternUrl : 'data/data/patt.hiro'
 		// patternUrl : '../../data/data/patt.kanji'
 	})
 
@@ -140,7 +140,7 @@
 	
 	var loader = new THREE.ObjectLoader();
 
-	loader.load( 'futureisnow3.json', function ( object ) {
+	loader.load( '/futureisnow3.json', function ( object ) {
 		// var geometry = object.geometry;
 		// var material = new THREE.MeshNormalMaterial();
 		// var mesh = new THREE.Mesh( geometry, material );
